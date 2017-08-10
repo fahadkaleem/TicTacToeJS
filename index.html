@@ -16,6 +16,9 @@
     </style>
     <script>
     function startGame(){
+        for(var i=1;i<=9;i=i+1){
+            clearBox(i);
+        }
         document.turn = "X";
         if (Math.random() < 0.5){
             document.turn = "O";
@@ -80,6 +83,9 @@
     function getBox(number){
         return document.getElementById("s"+number).innerText;
     }
+    function clearBox(number){
+        document.getElementById("s"+ number).innerText = "";
+    }
     </script>
 </head>
 <body onload="startGame();">
@@ -102,5 +108,6 @@
         <td id="s9" class="Square" onclick="nextMove(this);"></td>
     </tr>
 </table>
+<a align="center" href="javascript:startGame();" >Start Over</a>
 </body>
 </html>
