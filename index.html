@@ -17,10 +17,14 @@
     <script>
     function startGame(){
         document.turn = "X";
+        setMessage(document.turn + " gets to start!");
+    }
+    function setMessage(message){
+        document.getElementById("message").innerText = message;
     }
     </script>
 </head>
-<body>
+<body onload="startGame();">
 <h1 align="center">Welcome to Tic Tac Toe!</h1>
 <div id="message" align="center">Messages will go here</div>
 <table border="1" align="center">
