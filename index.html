@@ -22,6 +22,19 @@
     function setMessage(message){
         document.getElementById("message").innerText = message;
     }
+    function nextMove(square){
+        square.innerText = document.turn;
+        switchTurn();
+    }
+    function switchTurn(){
+        if(document.turn=="X"){
+            document.turn="O";
+        }
+        else{
+            document.turn = "X";
+        }
+        setMessage("It's " + document.turn + " 's turn!")
+    }
     </script>
 </head>
 <body onload="startGame();">
@@ -29,19 +42,19 @@
 <div id="message" align="center">Messages will go here</div>
 <table border="1" align="center">
     <tr>
-        <td class="Square">X</td>
-        <td class="Square">O</td>
-        <td class="Square">O</td>
+        <td class="Square" onclick="nextMove(this);"></td>
+        <td class="Square" onclick="nextMove(this);"></td>
+        <td class="Square" onclick="nextMove(this);"></td>
     </tr>
     <tr>
-        <td class="Square">O</td>
-        <td class="Square">X</td>
-        <td class="Square">O</td>
+        <td class="Square" onclick="nextMove(this);"></td>
+        <td class="Square" onclick="nextMove(this);"></td>
+        <td class="Square" onclick="nextMove(this);"></td>
     </tr>
     <tr>
-        <td class="Square">O</td>
-        <td class="Square">O</td>
-        <td class="Square">X</td>
+        <td class="Square" onclick="nextMove(this);"></td>
+        <td class="Square" onclick="nextMove(this);"></td>
+        <td class="Square" onclick="nextMove(this);"></td>
     </tr>
 </table>
 </body>
