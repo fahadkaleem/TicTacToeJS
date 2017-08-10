@@ -17,13 +17,20 @@
     <script>
     function startGame(){
         document.turn = "X";
+        if (Math.random() < 0.5){
+            document.turn = "O";
+        }
+        document.winner = null;
         setMessage(document.turn + " gets to start!");
     }
     function setMessage(message){
         document.getElementById("message").innerText = message;
     }
     function nextMove(square){
-        if (square.innerText=="") {
+        if(document.winner != null){
+            setMessage(document.winner + " already won the game!.");
+        }
+        else if (square.innerText=="") {
             square.innerText = document.turn;
             switchTurn();
         }
@@ -34,6 +41,7 @@
     function switchTurn(){
         if (checkForWinner(document.turn)){
             setMessage("Congratulations, " + document.turn + "! You win!");
+            document.winner = document.turn;
         }
         else if(document.turn=="X"){
             document.turn="O";
