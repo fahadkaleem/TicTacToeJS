@@ -1,0 +1,25 @@
+.Square{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 58pt;
+    font-weight: bold;
+    font-family: Arial;
+    color: white;
+    border-radius: 15%;
+    border-color: salmon;
+    background: indianred;
+}
+
+
+.body{
+    color: indianred;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.message{
+    color: indianred;
+    font-size: 25px;
+    margin: 5%;
+}
