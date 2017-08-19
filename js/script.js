@@ -6,6 +6,7 @@ function startGame(){
         clearBox(i);
     }
     document.turn = "X";
+    document.number = 0;
     if (Math.random() < 0.5){
         document.turn = "O";
     }
@@ -21,6 +22,7 @@ function nextMove(square){
     }
     else if (square.innerText=="") {
         square.innerText = document.turn;
+        document.number +=1;
         switchTurn();
     }
     else{
@@ -31,6 +33,9 @@ function switchTurn(){
     if (checkForWinner(document.turn)){
         setMessage("Congratulations, " + document.turn + "! You win!");
         document.winner = document.turn;
+    }
+    else if(document.number===9){
+        setMessage("Game Over!");
     }
     else if(document.turn=="X"){
         document.turn="O";
