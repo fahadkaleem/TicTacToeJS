@@ -8,4 +8,3 @@ Today is Day 2 of my coding practice challenge. Today I am going to implement a 
 ## v2 - Two Player
 ![v2-Screenshot](https://github.com/fahadkaleem/TicTacToeJS/blob/master/screenshots/v2.png)
 
-Added the game over functionality
